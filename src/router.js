@@ -16,7 +16,11 @@ const routes =  [
         path: "/add",
         name: "add",
         component: () => import("./components/AddArticle.vue")
-    }
+    },
+    {   path : "/:patchMatch(.*)",
+        name: "NotFound",
+        component: () => import("./components/NotFound.vue")
+}
     ];
     
     const router = createRouter({
